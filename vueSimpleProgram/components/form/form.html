@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div id="app">
+        <form @submit.prevent="submitForm" v-if="!formSubmitted">
+            <span>Full Name</span>
+            <input v-model="name" type="text" placeholder="Enter your name" /><br>
+
+            <span>Email</span><br>
+            <input v-model="email" type="email" placeholder="Enter your email" /><br>
+
+            <span>Gender</span><br>
+            <div class="gender">
+            <label for="male">Male</label>
+            <input type="radio" v-model="gender" value="Male" id="male">
+
+            <label for="female">Female</label>
+            <input type="radio" v-model="gender" value="Female" id="female">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div v-if="formSubmitted">
+            <h3>Form Submitted</h3>
+            <p>Name: {{ name }}</p>
+            <p>Email: {{ email }}</p>
+            <p>Gender: {{ gender }}</p>
+            <small>Click on run to launch the app again.</small>
+            <button @click="resetForm">Click on run to launch the app again.</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="form.js"></script>
+</body>
+</html>

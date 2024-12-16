@@ -1,0 +1,22 @@
+<!-- ChildComponent.vue -->
+<template>
+    <div>
+        <h1>Parent Component</h1>
+        <ChildComponent title="Hello, Vue!" description="This is a description passed from the parent." />
+        <ChildComponent title="Another title" />
+       </div>
+  </template>
+
+  <script>
+    import ChildComponent from './ChildComponent.vue';
+    
+    export default {
+      name: 'ParentComponent',
+      components: {
+        ChildComponent
+      }
+    }
+    </script>
+
+<style scoped>
+</style>

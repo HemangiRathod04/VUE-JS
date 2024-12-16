@@ -1,0 +1,40 @@
+.container {
+    /* max-width: 800px; */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .form-group input[type="file"] {
+    display: block;
+    margin-top: 5px;
+  }
+  
+  .preview-image {
+    margin-top: 10px;
+    max-width: 200px;
+  }
+  
+  .preview-image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 5px;
+  }
+  .text-red-600,span{
+    color: red;
+  }
